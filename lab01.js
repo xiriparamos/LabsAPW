@@ -45,4 +45,41 @@ executeFunctions([sayHi, "Oops", , sayBye])
 // Bye
 
 
-//
+// filterProducts
+
+const products = [
+  {name: 'Apple', price: 5},
+  {name: 'Orange', price: 10},
+  {name: 'Banana', price: 3}
+]
+
+
+
+function filterProduct(obj, minPrice){
+     for (let key in obj) {
+
+     if ( obj[key].price >= minPrice ) {
+        console.log(obj[key])
+     } 
+  }  
+}
+
+const expensive = filterProduct(products, 4)
+
+// expensive: [
+//   {name: 'Apple', price: 5},
+//   {name: 'Orange', price: 10}
+// ]
+
+
+//  mapProduct
+
+const products = [
+  {name: 'Apple', price: 5},
+  {name: 'Orange', price: 10},
+  {name: 'Banana', price: 3}
+]
+
+const names = mapProduct(products)
+
+// names: ['Apple', 'Orange', 'Banana']
